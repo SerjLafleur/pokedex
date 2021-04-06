@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getPokemon } from './api'
+import { getPokemon, getPokemonData } from './api'
 import Navbar from './component/Navbar'
 import SearchBar from './component/SearchBar'
 import Pokedex from './component/Pokedex'
@@ -12,7 +12,11 @@ function App() {
   const fetchPokemons = async () => {
     try {
       const data = await getPokemon()
-      setPokemons(data.results)
+      const promise = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url)
+      })
+      const results = await Promise.all(promise)
+      setPokemons(results)
     } catch (err) { }
   }
 

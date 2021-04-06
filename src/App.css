@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
 *{
   margin: 0;
 }
@@ -12,7 +15,7 @@ nav {
 
 .searchbar-container {
   display: flex;
-  margin: 0px 10px;
+  margin: 0px 30%;
   padding: 0;
   align-items: center;
   flex: 1;
@@ -52,7 +55,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 3%;
   padding: 10px;
 
 }
@@ -69,12 +72,57 @@ nav {
 
 .pokedex-grid {
   display: grid;
-  grid-auto-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
+}
 
+.pokemon-card{
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  margin: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.pokemon-img{
+  background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+  margin-left: 30%;
+  
+}
+
+.pokemon-img img {
+	margin-top: 20px;
+	max-width: 90%;
+} 
+
+.pokemon-id {
+  margin-top: 20px;
+}
+
+.pokemon-id .id {
+  background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+  margin: 10px 150px;
+}
+
+.pokemon-data .name {
+	letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.pokemon-data .pokemon-types{
+  margin-right: 10px;
+  text-transform: capitalize;
 }
 
 .App {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato';
   
 }
