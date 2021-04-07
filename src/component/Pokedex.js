@@ -1,14 +1,26 @@
 import React from 'react';
 import Pokemon from './Pokemon'
+import Pagination from './Pagination'
+import Spinner from './Spinner'
 
 
 const Pokedex = (props) => {
 
-    const { pokemons } = props
+    const { pokemons, page, setPage, total, loading } = props
 
-    console.log(pokemons)
+    const lastPage = () => {
+        const nextPage = Math.max(page - 1, 0)
+        setPage(nextPage)
+    }
+
+    const nextpage = () => {
+        const nextPage = Math.min(page + 1, total)
+        setPage(nextPage)
+    }
 
     let imgUrl = 'https://sergiobaltanas.com/wp-content/uploads/2021/04/pokedex.png'
+
+
     return (
         <div>
             <div className='header'>
@@ -16,15 +28,21 @@ const Pokedex = (props) => {
                     <img src={imgUrl} alt='img pokedex' />
                     <h1>Pokedex</h1>
                 </div>
-                <div>Pagination</div>
+                <Pagination
+                    page={page + 1}
+                    totalPages={total}
+                    onClickLeft={lastPage}
+                    onClickRigth={nextpage}
+                />
             </div>
-            <div className='pokedex-grid'>
+            {loading ? (<Spinner />) : (<div className='pokedex-grid'>
                 {pokemons.map((pokemon, idx) => {
                     return (
                         <Pokemon pokemon={pokemon} key={pokemon.name} />
                     )
                 })}
-            </div>
+            </div>)}
+
         </div>
     );
 }

@@ -27,7 +27,7 @@ const Pokemon = (props) => {
     const color = colors[type];
 
 
-    console.log(pokemon)
+
 
     const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
     return (

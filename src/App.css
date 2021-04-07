@@ -3,6 +3,11 @@
 
 *{
   margin: 0;
+  
+}
+
+body {
+  background-color: #f7f7f9;
 }
 
 nav {
@@ -120,6 +125,31 @@ nav {
 .pokemon-data .pokemon-types{
   margin-right: 10px;
   text-transform: capitalize;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.spinner img {
+  width: 500px;
+  height: 300px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: #363636;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 10px;
+  outline: none;
 }
 
 .App {
