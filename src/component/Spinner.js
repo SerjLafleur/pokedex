@@ -6,7 +6,7 @@ const Spinner = () => {
 
     return (
         <div className='spinner'>
-            <img src={urlImg} />
+            <img src={urlImg} alt='Spinner' />
         </div>
     );
 }

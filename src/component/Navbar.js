@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import FavoriteContext from '../contexts/favoriteContext'
 
 
 const Navbar = () => {
+
+    const { favoritePokemons } = useContext(FavoriteContext)
+
+    console.log(favoritePokemons)
     return (
         <nav>
             <div />
@@ -11,7 +16,7 @@ const Navbar = () => {
                     alt='logo-pokemon'
                 />
             </div>
-            <div>❤️</div>
+            <div>❤️ {favoritePokemons.length}</div>
         </nav>
     );
 }
