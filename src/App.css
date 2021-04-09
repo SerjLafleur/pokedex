@@ -53,6 +53,7 @@ nav {
   color: white;
   padding: 10px 12px;
   margin-left: 20px;
+  outline: none;
 }
 
 .header {
@@ -96,7 +97,7 @@ nav {
 	width: 120px;
 	height: 120px;
 	text-align: center;
-  margin-left: 30%;
+  margin-left: 42%;
   
 }
 
@@ -115,6 +116,12 @@ nav {
 	font-size: 0.8em;
 	padding: 5px 10px;
   margin: 10px 150px;
+}
+
+.pokemon-id button {
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .pokemon-data .name {
@@ -150,6 +157,23 @@ nav {
   padding: 10px;
   margin: 0 10px;
   outline: none;
+}
+
+.error-pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.error-pokemon img {
+  width: 600px;
+  height: 400px;
+}
+
+.error-pokemon h3 {
+  margin: 20px 0;
 }
 
 .App {

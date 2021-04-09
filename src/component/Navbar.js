@@ -6,7 +6,6 @@ const Navbar = () => {
 
     const { favoritePokemons } = useContext(FavoriteContext)
 
-    console.log(favoritePokemons)
     return (
         <nav>
             <div />
